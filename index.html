@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <title>Test Project</title>
-    <link rel="stylesheet" href="_css/styles.css">
+    <link rel="stylesheet" href="_/css/styles.css">
   </head>
   <body>
-    <main id="main-content" class="center">
+    <main id="main-content">
         <!-- global header -->
         <header id="brand-header">
-          <ul>
+          <a href="#" class="brand-logo"><img src="_/images/logo.png" alt="brand-logo" itemprop="logo"/></a>
+          <ul class="brand-cta">
             <li><a href="">Sign in/Register</a></li>
-            <li><a href="">Stories/Stockists</a></li>
-            <li><a href="">Your bag<em>(2)</em></a></li>
+            <li><a href="">Stores/Stockists</a></li>
+            <li><a href="">Your bag <em>(2)</em></a></li>
           </ul>
-          <a href="#" class="brand-logo"><img src="images/logo.png" alt="brand-logo" itemprop="logo"/></a>
         </header>
         <!-- navigation template -->
-        <nav id="nav">
-          <ul class="nav_links">
+        <nav id="navigation">
+          <ul class="navigation-links">
               <li><a href="#">clothing</a></li>
               <li><a href="#">travel</a></li>
               <li><a href="#">nursery furniture</a></li>
@@ -30,8 +30,8 @@
           </ul>
         </nav>
         <!-- search form -->
-        <form>
-            <input type="text" placeholder="Hello, I'm looking for..." class="search-field"/>
+        <form id="search-field">
+            <input type="text" placeholder="Hello, I'm looking for..."/>
         </form>
         <!-- banner-placeholder -->
         <section>
@@ -41,5 +41,7 @@
         </section>
     </main>
     <script src="_/js/scripts.js"></script>
+    <!-- grunt live reload -->
+    <script src="http://localhost:35729/livereload.js"></script>
   </body>
 </html>

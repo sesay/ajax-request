@@ -1,0 +1,3 @@
+*.sass-cache*
+_/components/
+node_modules
