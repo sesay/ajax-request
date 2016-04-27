@@ -36,7 +36,9 @@
         </nav>
         <!-- search form -->
         <form id="search-field">
-            <input type="text" placeholder="Hello, I'm looking for..." />
+            <input class="search-input" type="text" onkeyup="update_results()" value="Hello, I'm looking for..." onFocus="this.value='';" />
+            <div class="search-results" ></div>
+            </div>
         </form>
         <!-- banner-placeholder -->
         <section id="banner-carousel">
@@ -59,6 +61,23 @@
     <script src="bower_components/Swiper/dist/js/swiper.js"></script>
     <!-- endbower -->
     <script src="_/js/scripts.js"></script>
+
+    <!-- search request -->
+    <script>
+    function update_results() {
+        $.ajax({
+            url: 'http://test.sonsuzdongu.com/query.php?keyword=' + $(".search-input").val(),
+            beforeSend: function() {
+    $('.search-results').html("<img src='_/images/loading.gif'style='width:50px; margin:0 auto;' />");
+  },
+            success: function(data) {
+                $('.search-input').bind('keyup', function() {
+                    $('.search-results').show().html(data);
+                }).keyup();
+            }
+        });
+    }
+    </script>
 
     <!-- grunt live reload -->
     <script src="http://localhost:35729/livereload.js"></script>
