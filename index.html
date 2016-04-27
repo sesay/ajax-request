@@ -1,47 +1,67 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>Test Project</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.css" />
+    <!-- endbower -->
     <link rel="stylesheet" href="_/css/styles.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <main id="main-content">
         <!-- global header -->
         <header id="brand-header">
-          <a href="#" class="brand-logo"><img src="_/images/logo.png" alt="brand-logo" itemprop="logo"/></a>
-          <ul class="brand-cta">
-            <li><a href="">Sign in/Register</a></li>
-            <li><a href="">Stores/Stockists</a></li>
-            <li><a href="">Your bag <em>(2)</em></a></li>
-          </ul>
+            <a href="#" class="brand-logo"><img src="_/images/logo.png" alt="brand-logo" itemprop="logo" /></a>
+            <ul class="brand-cta">
+                <li><a href="">Sign in/Register</a></li>
+                <li><a href="">Stores/Stockists</a></li>
+                <li><a href="">Your bag <em>(2)</em></a></li>
+            </ul>
         </header>
         <!-- navigation template -->
         <nav id="navigation">
-          <ul class="navigation-links">
-              <li><a href="#">clothing</a></li>
-              <li><a href="#">travel</a></li>
-              <li><a href="#">nursery furniture</a></li>
-              <li><a href="#">nursery interiors</a></li>
-              <li><a href="#">playtime</a></li>
-              <li><a href="#">bathtime</a></li>
-              <li><a href="#">feeding</a></li>
-              <li><a href="#">gifts</a></li>
-          </ul>
+            <ul class="navigation-links">
+                <li><a href="#">clothing</a></li>
+                <li><a href="#">travel</a></li>
+                <li><a href="#">nursery furniture</a></li>
+                <li><a href="#">nursery interiors</a></li>
+                <li><a href="#">playtime</a></li>
+                <li><a href="#">bathtime</a></li>
+                <li><a href="#">feeding</a></li>
+                <li><a href="#">gifts</a></li>
+            </ul>
         </nav>
         <!-- search form -->
         <form id="search-field">
-            <input type="text" placeholder="Hello, I'm looking for..."/>
+            <input type="text" placeholder="Hello, I'm looking for..." />
         </form>
         <!-- banner-placeholder -->
-        <section>
-          <p>
-            enter banner content here
-          </p>
+        <section id="banner-carousel">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://placehold.it/960X500" /></div>
+                    <div class="swiper-slide"><img src="http://placehold.it/960X500" /></div>
+                    <div class="swiper-slide"><img src="http://placehold.it/960X500" /></div>
+                    <div class="swiper-slide"><img src="http://placehold.it/960X500" /></div>
+                    <div class="swiper-slide"><img src="http://placehold.it/960X500" /></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
     </main>
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/Swiper/dist/js/swiper.js"></script>
+    <!-- endbower -->
     <script src="_/js/scripts.js"></script>
+
     <!-- grunt live reload -->
     <script src="http://localhost:35729/livereload.js"></script>
-  </body>
+</body>
+
 </html>

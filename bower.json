@@ -1,0 +1,22 @@
+{
+  "name": "altayer-project",
+  "description": "Test Project",
+  "main": "",
+  "authors": [
+    "sesay umar <umarsesay@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "Swiper": "swiper#^3.3.1"
+  }
+}

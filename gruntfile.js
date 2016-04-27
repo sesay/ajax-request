@@ -5,9 +5,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-wiredep');
 
   //compress JS files
   grunt.initConfig({
+    wiredep: {
+     task: {
+       src: 'index.html' // point to your HTML file.
+     }
+   },
     uglify: {
       my_target: {
         files: {
