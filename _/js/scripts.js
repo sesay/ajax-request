@@ -1,1 +1,1 @@
-$(document).ready(function(){new Swiper(".swiper-container",{pagination:".swiper-pagination",paginationClickable:!0})});
+$(document).ready(function(){new Swiper(".swiper-container",{pagination:".swiper-pagination",paginationClickable:!0});$("#search").keyup(function(){var a=$(".search-input").val(),b=new RegExp(a,"i");$.getJSON({url:"http://test.sonsuzdongu.com/query.php?keyword="+a,success:function(a){var c="<ul class='search-lists'>";$.each(a,function(a,d){-1!=d.term.search(b)&&(c+="<li>",c+="<a>"+d.term+"</a>",c+="</li>")}),c+="</ul>",$(".search-results").html(c)}})})});
